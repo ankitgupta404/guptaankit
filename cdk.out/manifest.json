@@ -1,0 +1,483 @@
+{
+  "version": "5.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "MyStaticSite": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://351164813146/eu-north-1",
+      "properties": {
+        "templateFile": "MyStaticSite.template.json"
+      },
+      "metadata": {
+        "/MyStaticSite": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50.zip",
+              "id": "4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50",
+              "packaging": "file",
+              "sourceHash": "4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50",
+              "s3BucketParameter": "AssetParameters4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50S3BucketB6159468",
+              "s3KeyParameter": "AssetParameters4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50S3VersionKey2060CAC0",
+              "artifactHashParameter": "AssetParameters4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50ArtifactHash846130E4"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/construct-compat.js:312:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:133:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:60:25)",
+              "MyStaticSiteStack.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:64:31)",
+              "new Asset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/function.js:83:33)",
+              "SingletonFunction.ensureLambda (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:74:16)",
+              "new SingletonFunction (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:20:36)",
+              "new BucketDeployment (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:21:25)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:65:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.ebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3",
+              "id": "ebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3",
+              "packaging": "zip",
+              "sourceHash": "ebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3",
+              "s3BucketParameter": "AssetParametersebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3S3Bucket0370B692",
+              "s3KeyParameter": "AssetParametersebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3S3VersionKey9B37F2C7",
+              "artifactHashParameter": "AssetParametersebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3ArtifactHash55296997"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/construct-compat.js:312:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:133:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:60:25)",
+              "MyStaticSiteStack.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:64:31)",
+              "new Asset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "Object.bind (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/source.js:46:31)",
+              "/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:35:62",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:35:39)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:65:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/StaticSite/Site": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSite93C8948E",
+            "trace": [
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:25:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/StaticSite/SiteBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteBucket1A888BC8",
+            "trace": [
+              "new Bucket (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3/lib/bucket.js:421:26)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:27:28)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/StaticSite/SiteBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteBucketPolicyD7934718",
+            "trace": [
+              "new BucketPolicy (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.js:22:25)",
+              "Bucket.addToResourcePolicy (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3/lib/bucket.js:126:27)",
+              "Function.addToPrincipalOrResource (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-iam/lib/grant.js:64:49)",
+              "Bucket.grantPublicAccess (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3/lib/bucket.js:265:26)",
+              "new Bucket (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3/lib/bucket.js:467:18)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:27:28)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/StaticSite/Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteBucket34E5D9AF",
+            "trace": [
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:33:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/StaticSite/SiteAliasRecord1/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteAliasRecord125BF3C99",
+            "trace": [
+              "new RecordSet (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-route53/lib/record-set.js:135:27)",
+              "new ARecord (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-route53/lib/record-set.js:163:9)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:54:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/StaticSite/SiteAliasRecord2/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteAliasRecord2064ED8DC",
+            "trace": [
+              "new RecordSet (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-route53/lib/record-set.js:135:27)",
+              "new ARecord (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-route53/lib/record-set.js:163:9)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:59:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/StaticSite/DeployWithInvalidation/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteDeployWithInvalidationCustomResource0B8F0E74",
+            "trace": [
+              "new CustomResource (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/custom-resource.js:24:25)",
+              "new BucketDeployment (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:44:9)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:65:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265",
+            "trace": [
+              "new Role (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-iam/lib/role.js:44:22)",
+              "new Function (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/function.js:65:35)",
+              "SingletonFunction.ensureLambda (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:74:16)",
+              "new SingletonFunction (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:20:36)",
+              "new BucketDeployment (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:21:25)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:65:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF",
+            "trace": [
+              "new Policy (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-iam/lib/policy.js:42:26)",
+              "Role.addToPrincipalPolicy (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-iam/lib/role.js:173:34)",
+              "Function.addToPrincipal (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-iam/lib/grant.js:82:65)",
+              "Function.addToPrincipalOrResource (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-iam/lib/grant.js:39:30)",
+              "Import.grant (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3/lib/bucket.js:289:31)",
+              "Import.grantRead (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3/lib/bucket.js:188:21)",
+              "Asset.grantRead (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:88:21)",
+              "Object.bind (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/source.js:53:23)",
+              "/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:35:62",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:35:39)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:65:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536",
+            "trace": [
+              "new Function (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/function.js:114:26)",
+              "SingletonFunction.ensureLambda (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:74:16)",
+              "new SingletonFunction (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:20:36)",
+              "new BucketDeployment (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:21:25)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:65:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/AssetParameters/4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50S3BucketB6159468",
+            "trace": [
+              "new FileAssetParameters (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:123:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:60:25)",
+              "MyStaticSiteStack.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:64:31)",
+              "new Asset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/function.js:83:33)",
+              "SingletonFunction.ensureLambda (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:74:16)",
+              "new SingletonFunction (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:20:36)",
+              "new BucketDeployment (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:21:25)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:65:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/AssetParameters/4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50S3VersionKey2060CAC0",
+            "trace": [
+              "new FileAssetParameters (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:123:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:60:25)",
+              "MyStaticSiteStack.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:64:31)",
+              "new Asset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/function.js:83:33)",
+              "SingletonFunction.ensureLambda (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:74:16)",
+              "new SingletonFunction (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:20:36)",
+              "new BucketDeployment (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:21:25)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:65:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/AssetParameters/4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50ArtifactHash846130E4",
+            "trace": [
+              "new FileAssetParameters (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:123:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:60:25)",
+              "MyStaticSiteStack.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:64:31)",
+              "new Asset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/function.js:83:33)",
+              "SingletonFunction.ensureLambda (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:74:16)",
+              "new SingletonFunction (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:20:36)",
+              "new BucketDeployment (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:21:25)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:65:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/AssetParameters/ebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3S3Bucket0370B692",
+            "trace": [
+              "new FileAssetParameters (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:123:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:60:25)",
+              "MyStaticSiteStack.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:64:31)",
+              "new Asset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "Object.bind (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/source.js:46:31)",
+              "/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:35:62",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:35:39)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:65:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/AssetParameters/ebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3S3VersionKey9B37F2C7",
+            "trace": [
+              "new FileAssetParameters (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:123:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:60:25)",
+              "MyStaticSiteStack.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:64:31)",
+              "new Asset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "Object.bind (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/source.js:46:31)",
+              "/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:35:62",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:35:39)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:65:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/MyStaticSite/AssetParameters/ebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3ArtifactHash55296997",
+            "trace": [
+              "new FileAssetParameters (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:123:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:60:25)",
+              "MyStaticSiteStack.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack.js:358:33)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:64:31)",
+              "new Asset (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "Object.bind (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/source.js:46:31)",
+              "/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:35:62",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:35:39)",
+              "new StaticSite (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/static-site.js:65:9)",
+              "new MyStaticSiteStack (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:20:9)",
+              "Object.<anonymous> (/Users/angptal/Documents/goodstuff/staticwebapp/guptaankit/index.js:27:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1075:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)",
+              "Module.load (internal/modules/cjs/loader.js:940:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:781:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.62.0",
+      "@aws-cdk/cx-api": "1.62.0",
+      "@aws-cdk/cloud-assembly-schema": "1.62.0",
+      "@aws-cdk/aws-route53": "1.62.0",
+      "@aws-cdk/aws-s3": "1.62.0",
+      "@aws-cdk/aws-events": "1.62.0",
+      "@aws-cdk/aws-iam": "1.62.0",
+      "@aws-cdk/region-info": "1.62.0",
+      "@aws-cdk/aws-kms": "1.62.0",
+      "@aws-cdk/aws-s3-deployment": "1.62.0",
+      "@aws-cdk/aws-lambda": "1.62.0",
+      "@aws-cdk/aws-applicationautoscaling": "1.62.0",
+      "@aws-cdk/aws-autoscaling-common": "1.62.0",
+      "@aws-cdk/aws-cloudwatch": "1.62.0",
+      "@aws-cdk/aws-codeguruprofiler": "1.62.0",
+      "@aws-cdk/aws-ec2": "1.62.0",
+      "@aws-cdk/aws-ssm": "1.62.0",
+      "@aws-cdk/aws-logs": "1.62.0",
+      "@aws-cdk/aws-s3-assets": "1.62.0",
+      "@aws-cdk/assets": "1.62.0",
+      "@aws-cdk/aws-sqs": "1.62.0",
+      "@aws-cdk/aws-route53-targets": "1.62.0",
+      "jsii-runtime": "node.js/v14.9.0"
+    }
+  }
+}

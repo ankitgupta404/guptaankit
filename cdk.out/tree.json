@@ -1,0 +1,440 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "MyStaticSite": {
+        "id": "MyStaticSite",
+        "path": "MyStaticSite",
+        "children": {
+          "StaticSite": {
+            "id": "StaticSite",
+            "path": "MyStaticSite/StaticSite",
+            "children": {
+              "Zone": {
+                "id": "Zone",
+                "path": "MyStaticSite/StaticSite/Zone"
+              },
+              "Site": {
+                "id": "Site",
+                "path": "MyStaticSite/StaticSite/Site"
+              },
+              "SiteBucket": {
+                "id": "SiteBucket",
+                "path": "MyStaticSite/StaticSite/SiteBucket",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "MyStaticSite/StaticSite/SiteBucket/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                      "aws:cdk:cloudformation:props": {
+                        "bucketName": "www.guptaankit.com",
+                        "websiteConfiguration": {
+                          "indexDocument": "index.html",
+                          "errorDocument": "error.html"
+                        }
+                      }
+                    }
+                  },
+                  "Notifications": {
+                    "id": "Notifications",
+                    "path": "MyStaticSite/StaticSite/SiteBucket/Notifications"
+                  },
+                  "Policy": {
+                    "id": "Policy",
+                    "path": "MyStaticSite/StaticSite/SiteBucket/Policy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "MyStaticSite/StaticSite/SiteBucket/Policy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
+                          "aws:cdk:cloudformation:props": {
+                            "bucket": {
+                              "Ref": "StaticSiteSiteBucket1A888BC8"
+                            },
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "s3:GetObject",
+                                  "Effect": "Allow",
+                                  "Principal": "*",
+                                  "Resource": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "StaticSiteSiteBucket1A888BC8",
+                                            "Arn"
+                                          ]
+                                        },
+                                        "/*"
+                                      ]
+                                    ]
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Bucket": {
+                "id": "Bucket",
+                "path": "MyStaticSite/StaticSite/Bucket"
+              },
+              "SiteAliasRecord1": {
+                "id": "SiteAliasRecord1",
+                "path": "MyStaticSite/StaticSite/SiteAliasRecord1",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "MyStaticSite/StaticSite/SiteAliasRecord1/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
+                      "aws:cdk:cloudformation:props": {
+                        "name": "www.guptaankit.com.",
+                        "type": "A",
+                        "aliasTarget": {
+                          "hostedZoneId": "Z3BAZG2TWCNX0D",
+                          "dnsName": "s3-website.eu-north-1.amazonaws.com"
+                        },
+                        "hostedZoneId": "Z07765741RHBEIKFWXT97"
+                      }
+                    }
+                  }
+                }
+              },
+              "SiteAliasRecord2": {
+                "id": "SiteAliasRecord2",
+                "path": "MyStaticSite/StaticSite/SiteAliasRecord2",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "MyStaticSite/StaticSite/SiteAliasRecord2/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
+                      "aws:cdk:cloudformation:props": {
+                        "name": "guptaankit.com.",
+                        "type": "A",
+                        "aliasTarget": {
+                          "hostedZoneId": "Z3BAZG2TWCNX0D",
+                          "dnsName": "s3-website.eu-north-1.amazonaws.com"
+                        },
+                        "hostedZoneId": "Z07765741RHBEIKFWXT97"
+                      }
+                    }
+                  }
+                }
+              },
+              "DeployWithInvalidation": {
+                "id": "DeployWithInvalidation",
+                "path": "MyStaticSite/StaticSite/DeployWithInvalidation",
+                "children": {
+                  "CustomResourceHandler": {
+                    "id": "CustomResourceHandler",
+                    "path": "MyStaticSite/StaticSite/DeployWithInvalidation/CustomResourceHandler"
+                  },
+                  "Asset1": {
+                    "id": "Asset1",
+                    "path": "MyStaticSite/StaticSite/DeployWithInvalidation/Asset1",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "MyStaticSite/StaticSite/DeployWithInvalidation/Asset1/Stage"
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "MyStaticSite/StaticSite/DeployWithInvalidation/Asset1/AssetBucket"
+                      }
+                    }
+                  },
+                  "CustomResource": {
+                    "id": "CustomResource",
+                    "path": "MyStaticSite/StaticSite/DeployWithInvalidation/CustomResource",
+                    "children": {
+                      "Default": {
+                        "id": "Default",
+                        "path": "MyStaticSite/StaticSite/DeployWithInvalidation/CustomResource/Default"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C": {
+            "id": "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C",
+            "path": "MyStaticSite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "MyStaticSite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "MyStaticSite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "MyStaticSite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "MyStaticSite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "s3:GetObject*",
+                                    "s3:GetBucket*",
+                                    "s3:List*"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "arn:",
+                                          {
+                                            "Ref": "AWS::Partition"
+                                          },
+                                          ":s3:::",
+                                          {
+                                            "Ref": "AssetParametersebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3S3Bucket0370B692"
+                                          }
+                                        ]
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "arn:",
+                                          {
+                                            "Ref": "AWS::Partition"
+                                          },
+                                          ":s3:::",
+                                          {
+                                            "Ref": "AssetParametersebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3S3Bucket0370B692"
+                                          },
+                                          "/*"
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Action": [
+                                    "s3:GetObject*",
+                                    "s3:GetBucket*",
+                                    "s3:List*",
+                                    "s3:DeleteObject*",
+                                    "s3:PutObject*",
+                                    "s3:Abort*"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "StaticSiteSiteBucket1A888BC8",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          {
+                                            "Fn::GetAtt": [
+                                              "StaticSiteSiteBucket1A888BC8",
+                                              "Arn"
+                                            ]
+                                          },
+                                          "/*"
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF",
+                            "roles": [
+                              {
+                                "Ref": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "MyStaticSite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "MyStaticSite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "MyStaticSite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "MyStaticSite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50S3BucketB6159468"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50S3VersionKey2060CAC0"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50S3VersionKey2060CAC0"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "handler": "index.handler",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "python3.6",
+                    "timeout": 900
+                  }
+                }
+              }
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "MyStaticSite/AssetParameters",
+            "children": {
+              "4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50": {
+                "id": "4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50",
+                "path": "MyStaticSite/AssetParameters/4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "MyStaticSite/AssetParameters/4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "MyStaticSite/AssetParameters/4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "MyStaticSite/AssetParameters/4184245adc1f2ed71e1f0ae5719f8fd7f34324b750f1bf06b2fb5cf1f4014f50/ArtifactHash"
+                  }
+                }
+              },
+              "ebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3": {
+                "id": "ebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3",
+                "path": "MyStaticSite/AssetParameters/ebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "MyStaticSite/AssetParameters/ebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "MyStaticSite/AssetParameters/ebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "MyStaticSite/AssetParameters/ebc199c2e08ae5b3c8f4635965a5c4a65cf8b616ed7a89c3373dd95e968f4fc3/ArtifactHash"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
